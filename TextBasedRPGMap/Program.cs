@@ -50,12 +50,23 @@ namespace TextBasedRPGMap
                 Console.Write("|"); // Simple border maker
                 for (int k = 0; k < MapWidth; k++)
                 {
+                    SetTextColor(map[i, k]);
                     Console.Write(map[i, k]);
+                    Console.ResetColor();
                 }
                 Console.WriteLine("|"); // Other side of border
             }
             DisplayBorder(MapWidth);
         }
+
+        static void SetTextColor(char TextType) // Should Make different text types like grass and mountains have different colors
+        {
+            switch (TextType)
+            {
+
+            }
+        }
+
         static void DisplayBorder(int size) // Draws the border around the map
         {
             Console.Write("+");
