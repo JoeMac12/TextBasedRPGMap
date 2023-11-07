@@ -16,7 +16,7 @@ namespace TextBasedRPGMap
             Console.WriteLine("------------------");
             Console.WriteLine();
 
-            DisplayLegend();
+            DisplayLegend(); // Show info
 
             Console.WriteLine();
             Console.WriteLine("------------------");
@@ -25,7 +25,7 @@ namespace TextBasedRPGMap
             Console.WriteLine("[Unscaled map]");
             Console.WriteLine();
 
-            DisplayMap();
+            DisplayMap(); // Normal size map
 
             Console.WriteLine();
             Console.WriteLine("[Double size map]" + " " + "(X2)");
@@ -130,7 +130,7 @@ namespace TextBasedRPGMap
             }
         }
 
-        static void DisplayBorder(int size) // Draws the border around the map
+        static void DisplayBorder(int size) // Draws the border on top and bottem of map
         {
             Console.Write("+");
             for (int i = 0; i < size; i++)
