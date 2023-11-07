@@ -13,6 +13,9 @@ namespace TextBasedRPGMap
 
             Console.WriteLine("Text Based RPG Map");
             Console.WriteLine();
+            DisplayLegend();
+
+            Console.WriteLine();
 
             DisplayMap();
 
@@ -90,6 +93,21 @@ namespace TextBasedRPGMap
                 Console.Write("-");
             }
             Console.WriteLine("+");
+        }
+
+        static void DisplayLegend() // Tell the user what each text is for the map
+        {
+            Console.WriteLine("Map Legend:");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray; // Mountains
+            Console.WriteLine("^ = Mountains");
+            Console.ForegroundColor = ConsoleColor.Green; // Grass
+            Console.WriteLine("` = Grass");
+            Console.ForegroundColor = ConsoleColor.Blue; // Water
+            Console.WriteLine("~ = Water");
+            Console.ForegroundColor = ConsoleColor.Yellow; // Trees
+            Console.WriteLine("* = Trees");
+            Console.ResetColor();
         }
     }
 }
