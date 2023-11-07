@@ -16,11 +16,18 @@ namespace TextBasedRPGMap
             DisplayLegend();
 
             Console.WriteLine();
+            Console.WriteLine("[Unscaled map]");
+            Console.WriteLine();
 
             DisplayMap();
 
             Console.WriteLine();
+            Console.WriteLine("[Double size map]");
+            Console.WriteLine();
 
+            DisplayMap(2); // Double size map
+
+            Console.WriteLine();
             Console.WriteLine("Press any key to exit the program");
             Console.ReadKey(true);
 
@@ -60,6 +67,32 @@ namespace TextBasedRPGMap
                 Console.WriteLine("|"); // Other side of border
             }
             DisplayBorder(MapWidth);
+        }
+
+        static void DisplayMap(int scale) // Draw the map but to a scale amount instead
+        {
+            int MapHeight = 12;
+            int MapWidth = 30;
+
+            DisplayBorder(MapWidth * scale);
+            for (int i = 0; i < MapHeight; i++)
+            {
+                for (int x = 0; x < scale; x++)
+                {
+                    Console.Write("|");
+                    for (int v = 0; v < MapWidth; v++)
+                    {
+                        SetTextColor(map[i, v]);
+                        for (int k = 0; k < scale; k++)
+                        {
+                            Console.Write(map[i, v]);
+                        }
+                        Console.ResetColor();
+                    }
+                    Console.WriteLine("|");
+                }
+            }
+            DisplayBorder(MapWidth * scale);
         }
 
         static void SetTextColor(char TextType) // Should Make different text types like grass and mountains have different colors
