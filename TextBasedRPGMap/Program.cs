@@ -61,8 +61,23 @@ namespace TextBasedRPGMap
 
         static void SetTextColor(char TextType) // Should Make different text types like grass and mountains have different colors
         {
-            switch (TextType)
+            switch (TextType) // Apply colors 
             {
+                case '^':
+                    Console.ForegroundColor = ConsoleColor.Gray; // Mountains
+                    break;
+                case '`':
+                    Console.ForegroundColor = ConsoleColor.Green; // Grass
+                    break;
+                case '~':
+                    Console.ForegroundColor = ConsoleColor.Blue; // Water
+                    break;
+                case '*':
+                    Console.ForegroundColor = ConsoleColor.Yellow; // Trees
+                    break;
+                default:
+                    Console.ResetColor(); // Base text color 
+                    break;
 
             }
         }
