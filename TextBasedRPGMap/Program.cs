@@ -28,13 +28,13 @@ namespace TextBasedRPGMap
             DisplayMap();
 
             Console.WriteLine();
-            Console.WriteLine("[Double size map]");
+            Console.WriteLine("[Double size map]" + " " + "(X2)");
             Console.WriteLine();
 
             DisplayMap(2); // Double size map
 
             Console.WriteLine();
-            Console.WriteLine("[Triple size map]");
+            Console.WriteLine("[Triple size map]" + " " + "(X3)");
             Console.WriteLine();
 
             DisplayMap(3); // Triple size map
@@ -62,11 +62,13 @@ namespace TextBasedRPGMap
             {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
         };
 
+        // The size of the unscaled map
+
+        static int MapHeight = 12; 
+        static int MapWidth = 30;
+
         static void DisplayMap() // Display the map chart
         {
-            int MapHeight = 12;
-            int MapWidth = 30;
-
             DisplayBorder(MapWidth);
             for (int i = 0; i < MapHeight; i++)
             {
@@ -84,9 +86,6 @@ namespace TextBasedRPGMap
 
         static void DisplayMap(int scale) // Draw the map but to a scale amount instead
         {
-            int MapHeight = 12;
-            int MapWidth = 30;
-
             DisplayBorder(MapWidth * scale);
             for (int i = 0; i < MapHeight; i++)
             {
