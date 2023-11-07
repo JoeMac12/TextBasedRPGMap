@@ -8,14 +8,20 @@ namespace TextBasedRPGMap
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // Main stuff
         {
 
             Console.WriteLine("Text Based RPG Map");
             Console.WriteLine();
+            Console.WriteLine("------------------");
+            Console.WriteLine();
+
             DisplayLegend();
 
             Console.WriteLine();
+            Console.WriteLine("------------------");
+            Console.WriteLine();
+
             Console.WriteLine("[Unscaled map]");
             Console.WriteLine();
 
@@ -28,6 +34,13 @@ namespace TextBasedRPGMap
             DisplayMap(2); // Double size map
 
             Console.WriteLine();
+            Console.WriteLine("[Triple size map]");
+            Console.WriteLine();
+
+            DisplayMap(3); // Triple size map
+
+            Console.WriteLine();
+
             Console.WriteLine("Press any key to exit the program");
             Console.ReadKey(true);
 
