@@ -44,6 +44,7 @@ namespace TextBasedRPGMap
             int MapHeight = 12;
             int MapWidth = 30;
 
+            DisplayBorder(MapWidth);
             for (int i = 0; i < MapHeight; i++)
             {
                 Console.Write("|"); // Simple border maker
@@ -51,8 +52,18 @@ namespace TextBasedRPGMap
                 {
                     Console.Write(map[i, k]);
                 }
-                Console.WriteLine("|"); // Other border
+                Console.WriteLine("|"); // Other side of border
             }
+            DisplayBorder(MapWidth);
+        }
+        static void DisplayBorder(int size) // Draws the border around the map
+        {
+            Console.Write("+");
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write("-");
+            }
+            Console.WriteLine("+");
         }
     }
 }
