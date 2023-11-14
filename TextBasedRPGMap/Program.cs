@@ -64,8 +64,8 @@ namespace TextBasedRPGMap
 
         // The size of the unscaled map
 
-        static int MapHeight = 12; 
-        static int MapWidth = 30;
+        static int MapHeight = map.GetLength(0); 
+        static int MapWidth = map.GetLength(1);
 
         static void DisplayMap() // Display the map chart
         {
